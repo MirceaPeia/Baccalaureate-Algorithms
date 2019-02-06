@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html >
+<head>
+<title>Algoritmi Bac</title>
+<link href="default.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+<div id="header">
+	<div id="menu">
+		<ul>
+			<li><a href="index.html">Acasa</a></li>
+            <li><a href="cifrenr.html">Operatii cu cifrele unor numere</a></li>
+            <li><a href="divi.html">Divizori/Numere Prime/Euclid</a></li>
+			<li><a href="fibo.html">Sirul lui Fibonacii</a></li>
+			<li><a href="ord.html">Ordonari</a></li>
+            <li><a href="interclasare.html">Interclasarea</a></li>
+            <li><a href="cautare.html">Cautare</a></li>
+            <li><a href="test.html">Test</a></li>
+		</ul>
+	</div>
+</div>
+<div id="headerbg">
+</div>
+
+    
+<div id="page">
+	<div id="content">
+		
+<h1>Algoritmi de ordonare a vectorilor:</h1>
+<h3>Regasim 4 algoritmi de ordonare a vectorilor in programa de bacalaureat:</h3>    
+        <ul><li><p>Buble sort</p> </li>
+        <li> <p>Sortarea prin numarare</p> </li>
+        <li> <p>Sortare prin insertie</p> </li>
+        <li> <p>Sortarea prin selectie</p> </li>
+        </ul>    
+	
+    
+    
+<h4>Buble sort:</h4>
+<pre>
+int v[25],i,n,ok,aux;
+int main()
+{cout&lt;&lt;"n="; cin>>n;
+for(i=1;i&lt;=n;i++)
+{cout&lt;&lt;"v["&lt;&lt;i&lt;&lt;"]="; cin>>v[i]; }
+for(i=1;i&lt;=n;i++) cout&lt;&lt;v[i]&lt;&lt;" ";
+do
+{ok=1;
+for(i=1;i&lt;n;i++)
+if(v[i]>v[i+1])
+{aux=v[i];
+v[i]=v[i+1];
+v[i+1]=aux;
+ok=0;
+}
+}while(ok!=1);
+for(i=1;i&lt;=n;i++)
+cout&lt;&lt;v[i]&lt;&lt;" ";
+}
+</pre><h3>Video explicativ al algoritmului:</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lyZQPjUT5B4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        
+
+<h4>Sortarea prin numarare:</h4>    
+<pre>
+int a[25],b[25],c[25],n,i,j;
+int main()
+{cout&lt;&lt;„nr de elemente=”; cin>>n;
+for(i=0;i&lt;n;i++) 
+{cout&lt;&lt;"v["&lt;&lt;i&lt;&lt;"]="; 
+cin>>a[i]; }
+for(i=0;i&lt;n;i++)
+cout&lt;&lt;a[i]&lt;&lt;" ";
+for(i=0;i&lt;n;i++)
+c[i]=a[i];
+for(i=0;i&lt;n;i++)
+for(j=i+1;j&lt;n;j++)
+if (a[i]&lt;a[j])
+b[j]++;
+else b[i]++;
+for(i=0;i&lt;n;i++)
+a[b[i]]=c[i];
+cout&lt;&lt;endl;
+for(i=0;i&lt;n;i++) cout&lt;&lt;a[i]&lt;&lt;" ";
+}
+</pre>
+<h3>Video explicativ al algoritmului:</h3>        
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XaqR3G_NVoo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<h4>Sortarea prin insertie</h4>
+<pre>
+int v[25],i,j,n,x;
+int main()
+{
+cout&lt;&lt;"n="; cin>>n;
+for(i=1;i&lt;=n;i++)
+{ cout&lt;&lt;"v["&lt;&lt;i&lt;&lt;"]="; cin>>v[i]; }
+for(i=1;i&lt;=n;i++) cout<<v[i]<<" ";
+for(i=2;i&lt;=n;i++)
+if (v[i]&lt;v[i-1])  
+{ x=v[i];    
+j=i-1;
+while (j>=0 &amp;&amp; v[j]>x)
+{
+v[j+1]=v[j];
+j--;
+}
+v[j+1]=x; 
+}
+for(i=1;i&lt;=n;i++)
+cout&lt;&lt;v[i]&lt;&lt;" ";}
+</pre>
+<h3>Video explicativ al algoritmului:</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ROalU379l3U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>        
+
+<h4>Sortarea prin selectie:</h4>
+<pre>
+int v[25],n,i,j,aux;
+int main()
+{cout&lt;&lt;"n=";cin>>n;
+for(i=0;i&lt;n;i++)
+{cout&lt;&lt;"v["&lt;&lt;i&lt;&lt;"]=";
+cin>>v[i];}
+for(i=0;i&lt;n;i++)
+cout&lt;&lt;v[i]&lt;&lt;" ";
+for(i=0;i&lt;n-1;i++)
+for(j=i+1;j&lt;n;j++)
+if(v[i]>v[j])
+{ aux=v[j]; 
+v[j]=v[i];
+v[i]=aux; }
+cout&lt;&lt;endl;
+for(i=0;i&lt;n;i++)
+cout&lt;&lt;v[i]&lt;&lt;" ";
+}</pre>
+<h3>Video explicativ al algoritmului:</h3>        
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ns4TPTC8whw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>        
+    
+   <h3>Probleme rezolvate pe baza algoritmilor de cautare in vectori:</h3>
+<ul>
+<li><p>Se da un vector cu n elemente, numere naturale. Afisati în ordine crescatoare valorile prime din vector.
+Exemplu: 
+Daca se citeste:
+7
+13 1 10 15 3 7 11
+Se va afisa:
+3 7 11 13</p><a href="ord/rezpb1.html" target="_blank ">Rezolvare</a>
+</li>
+
+<li><p>Să se ordoneze crescator elementele patrat perfect ale unui sir dat, fara a afecta elementele care nu sunt patrat perfect.
+Exemplu
+Daca se citeste:
+8
+9 15 16 4 5 1 7 9
+Se va afisa:
+1 15 4 9 5 9 7 16</p><a href="ord/rezpb2.html" target="_blank ">Rezolvare</a>
+</li>
+<li><p>Se considera subprogramul valuri, cu doi parametri:
+• n, prin care primeste o valoare naturala.
+• v, prin care furnizeaza un tablou unidimensional cu 2·n elemente, valori întregi din
+intervalul [1, 2·n].
+Subprogramul construieste tabloul v astfel încat, în acesta, sirul elementelor impare să fie
+strict crescator, iar sirul elementelor pare să fie strict descrescator. Primul element al
+tabloului este impar, iar doua elemente cu aceeasi paritate nu pot ocupa pozitii
+consecutive în tablou, ca în exemplu.
+Scrieti definitia completa a subprogramului.
+Exemplu: daca n=4 atunci,după apel, v=( 1, 8, 3, 6, 5, 4, 7, 2). </p>
+    <a href="ord/rezpb3.html" target="_blank">Rezolvare</a>
+</li>
+
+
+
+</ul>
+<h3>Probleme nerezolvate pe baza algoritmilor de cautare in vectori:</h3>
+<ul>
+<li>Se dau n numere naturale nenule. Ordonati descrescator cele n numere dupa numărul lor de divizori.
+Exemplu:
+Daca se citeste:
+5
+12 20 4 100 13
+Se va afisa:
+100 12 20 4 13
+</li><br>
+
+<li>Se dă un vector cu n elemente, numere naturale. Afisati în ordine descrescatoare valorile din vector care sunt prime cu ultimul 
+element al vectorului.
+Exemplu
+Daca se citeste:
+8
+16 7 6 3 1 5 9 14 
+Se va afisa:
+9 5 3 1
+</li><br>
+
+<li>Se dă un vector cu n elemente, numere naturale. Afisati în ordine crescatoare elementele iar dupa fiecare element, inserati 
+indicele pozitiei pe care acesta se afla înainte ca vectorul să fie sortat.
+Daca există mai multe elemente cu aceeasi valoare, indicii acestora se vor afisa în ordine crescatoare.
+Exemplu:
+Daca se citeste:
+7
+12 8 9 0 19 2 8
+Se va afisa:
+0 4 2 6 8 2 8 7 9 3 12 1 19 5
+</li>
+
+
+</ul> 
+    </div>
+    
+<div id="footer">
+</div>	
+</div>
+
+</body>
+</html>

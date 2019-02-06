@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html >
+<head>
+<title>Algoritmi Bac</title>
+<link href="default.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+            <div id="header">
+            <div id="menu">
+                <ul>
+                    <li><a href="index.html">Acasa</a></li>
+                    <li><a href="cifrenr.html">Operatii cu cifrele unor numere</a></li>
+                    <li><a href="divi.html">Divizori/Numere Prime/Euclid</a></li>
+                    <li><a href="fibo.html">Sirul lui Fibonacii</a></li>
+                    <li><a href="ord.html">Ordonari</a></li>
+                    <li><a href="interclasare.html">Interclasarea</a></li>
+                    <li><a href="cautare.html">Cautare</a></li>
+                    <li><a href="test.html">Test</a></li>
+                </ul>
+            </div>
+            </div>
+<div id="headerbg">
+</div>
+
+<div id="page">
+	<div id="content">
+		 <c> <h1>Şirul lui Fibonacci</h1> </c>
+        <h3>Fiecare numar Fibonacii este suma celor doua numere Fibonacci anterioare asadar avem urmatoarea secventa: <br>
+            0 1 1 2 3 5 8 13 21 34 55....</h3>
+        <h4>Sirul lui Fibonaci se va defini prin aceasta formula: </h4>  <img src="images/fibo.jpg" alt="Sirul lui Fibonacii">
+        
+        
+        
+ <h3>Algorituml pentru afisarea primilor n termeni ai sirului lui Fibonacci in C++:</h3>
+<pre> int n,i,f1,f2,f3;
+int main()
+{cin>>n;
+if(n==1)cout&lt;&lt;"1";
+else {cout&lt;&lt;"1"&lt;&lt;" "&lt;&lt;"1";
+f1=f2=1;
+}
+for(i=3;i&lt;n;i++)
+{f3=f1+f2;
+cout&lt;&lt;f3&lt;&lt;" ";
+f1=f2;
+f2=f3;}
+}
+</pre>
+
+        <h3>Exercitii rezolvate care implica sirul lui Fibonacci din exercitile propuse ca pregatire pentru bacalaureat:</h3>
+   <ul>
+    <li>   <p>Subprogramul fibo are ca paramentru pe n numar natural (n<100). Suprogramul va afisa pe ecran toate numerele ce apartin sirului lui fibonacci mai mici sau egale cu n.  </p>
+            <a href="fibo/rezpb1.html" target="_blank " >Rezolvare</a>
+            <br>   
+    </li>         
+    <li>    <p> Sa se determine daca numarul a si numarul b sunt termeni consecutivi ai sirului lui Fibonacci</p>
+         <a href="fibo/rezpb2.html" target="_blank ">Rezolvare</a>
+    </li>     
+    <li>    <p>Subprogramul fimpar are ca paramentru numarul natural n (n<201). Suprogramul va returna cel de al n-lea termen impar din sirul lui fibonacci</p> 
+            <a href="fibo/rezpb3.html" target="_blank ">Rezolvare</a>
+    </li> 
+    </ul>       
+           
+        <h3>Modele de exercitii nerezolvate care se bazeaza pe sirul lui Fibonacii:</h3>
+<ul>
+     <li>    <p>Se citesc doua numere naturale a si b (ambele mai mari decat 1). Calculati si afisati cati termeni din sirul lui Fibonacci se afla in intervalul [a,b]. <br>
+         Exemplu: <br>
+         In intervalul [20,40] sunt 2 termeni (21 si 34) </p>
+    </li>
+    <li>     <p>Se citeste un numar natural n. Sa se afiseze cea mai scurta descompunere a lui n ca suma de termeni distincti din sirul lui Fibonacci.<br> 
+        Exemplu: 45 se descompune ca 34+8+3 </p>
+    </li>    
+    <li>    <p>Se da numar natural n. Sa se construiasca si afiseze o matrice cu n linii si n coloane care are pe linile impare primi n termeni ai sirului lui Fibonacci in ordine crescatoare, apoi pe linile pare urmatorii n termeni a sirului lui Fibonacci in ordine descrescatoare. <br>
+        Exemplu: pentru n=4 se va afisa matricea: <br>
+        0 1 1 2 <br>
+        13 8 5 3<br>
+        21 34 55 89<br>
+        590 377 212 144
+        </p>
+    </li>    
+</ul>   
+	</div>
+
+<div id="footer">
+	
+</div>	
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Algoritmi Bac</title>
+    <link href="default.css" rel="stylesheet" type="text/css" />
+</head>
+    
+<body>
+        <div id="header">
+            <div id="menu">
+                <ul>
+                    <li><a href="index.html">Acasa</a></li>
+                    <li><a href="cifrenr.html">Operatii cu cifrele unor numere</a></li>
+                    <li><a href="divi.html">Divizori/Numere Prime/Euclid</a></li>
+                    <li><a href="fibo.html">Sirul lui Fibonacii</a></li>
+                    <li><a href="ord.html">Ordonari</a></li>
+                    <li><a href="interclasare.html">Interclasarea</a></li>
+                    <li><a href="cautare.html">Cautare</a></li>
+                    <li><a href="test.html">Test</a></li>
+                </ul>
+            </div>
+        </div>
+
+    <div id="headerbg">
+    </div>
+
+<div id="page">
+	<div id="content">
+            <h1>Algoritmii din aceasta categorie:</h1>		
+            
+                    
+            <h2>Suma Cifrelor:</h2>
+<pre>
+int s=0;
+while(n!=0)
+{s=s+n%10;
+n=n/10;
+}
+</pre>
+                            
+            
+        <h2>Produsul Cifrelor:</h2>
+<pre>
+int p=1;
+while(n!=0)
+{p=p*n%10;
+n=n/10;
+}
+</pre>
+                        
+                
+            <h2>Numarul de cifre:</h2>
+<pre>
+int nr=0;
+while(n!=0)
+{nr++;
+n=n/10;
+}
+</pre>
+
+
+<h2>Oglinditul unui numar:</h2>
+<pre>int m=1;
+while(n!=0)
+{m=m*10+n%10;
+n=n/10;
+}
+</pre>
+
+
+<h2>Cifra Maxima:</h2>
+<pre>
+int m=0;
+while(n!=0)
+{if(m>n%10)m=n%10;
+n=n/10;
+}
+</pre>
+
+
+
+<h2>Cifra Minima:</h2>   
+<pre>
+int m=10;
+while(n!=0)
+{if(m&ltn%10)m=n%10;
+n=n/10;
+}
+</pre>
+                    
+
+
+<h2>Probleme rezolvate bazate pe algoritmele de mai sus:</h2>
+<ul>
+        <li> <p> Se citeste un numar natural n. Calculati si afisati rasturnatul (oglinditul) sumei cifrelor lui n. <br> 
+            Exemplu: Pentru n=34565 se va afisa 32 (suma cifrelor este 23, iar rasturnatul lui 23 este 32)</p>
+            <a href="cifrenr/rezpb1.html "  target="_blank" >Rezolvare</a> 
+        </li>
+        <li>
+        <p>Se citesc numere naturale pana cand se introduce valoarea 0. Pentru fiecare numar citit calculati numarul format din cifrele lui pare, numarul format din cifrele lui impare si afisati cel mai mare dintre cele doua numere calculate.  <br>
+        Exemplu: <br>
+        Daca introducem numerele 234564 335 224 10136 0 <br> 
+        vom obtine numerele 2464 335 224 113 
+        </p>
+            <a href="cifrenr/rezpb2.html" target="_blank ">Rezolvare</a>
+        </li>    
+        <li>
+        <p>Se citesc un numar natural n si o cifra c. Eliminati toate aparitiile cifrei c din numarul n si afisati numarul astfel obtinut. <br>
+        Exemplu: n= 2345324 , c=2 rezulta numarul 34534 </p>    
+            <a href="cifrenr/rezpb3.html"  target="_blank">Rezolvare</a>
+        </li>        
+        </ul>
+            <h3>Probleme nerezolvate bazate pe algoritmele de mai sus:</h3>
+        <ul>
+        <li>
+        <p>
+        Se citeste un numar natural n si apoi n numere naturale. Afisati numerele care au suma cifrelor egala cu suma cifrelor primului numar citit.<br>
+        Ex: <br>
+         citesc numerele <br>
+        7 <br>
+        23 78 14 30 32 8 50 <br>
+        se vor afisa <br>
+        14 32 50     
+
+        </p>        
+        </li>
+
+
+        <li>
+        <p>
+           Sa se afiseze cifra care apare de cele mai multe ori intr-un numar natural n si de cate ori apare ea in n.  <br>
+        Exemplu: n=133121 se afiseaza 1 3  
+        </p>        
+        </li>
+
+
+        <li>
+        <p>
+            Se citeste un numar natural n cu numar par de cifre. Calculati si afisati numarul obtinut din n inversand cifra unitatilor cu a zecilor, cea a sutelor cu cea a miilor, etc. <br>
+        Exemplu: <br>
+        n=123456 rezulta 214365
+        </p>        
+        </li>
+
+    
+</ul>    
+
+
+	
+</div>
+<div id="footer">
+</div>	
+</div>
+    
+</body>
+    
+</html>

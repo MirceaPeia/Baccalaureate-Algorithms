@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html >
+<head>
+<title>Algoritmi Bac</title>
+<link href="../default.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<div id="header">
+<div id="menu">
+<ul>
+<li><a href="../index.html">Acasa</a></li>
+<li><a href="../cifrenr.html">Operatii cu cifrele unor numere</a></li>
+<li><a href="../divi.html">Divizori/Numere Prime/Euclid</a></li>
+<li><a href="../fibo.html">Sirul lui Fibonacii</a></li>
+<li><a href="../ord.html">Ordonari</a></li>
+<li><a href="../interclasare.html">Interclasarea</a></li>
+<li><a href="../cautare.html">Cautare</a></li>
+<li><a href="../test.html">Test</a></li>
+</ul>
+</div>
+</div>
+<div id="headerbg">
+</div>
+
+<div id="page">
+<div id="content">
+<pre>
+#include &lt;iostream>
+using namespace std;
+int n,m,a[200000];
+int main()
+{
+cin >> n;
+int k=0;
+for(int i=1;i&lt;=n;i++)
+cin >> a[k], k++;
+cin >> m;
+for(int i=1;i&lt;=m;i++)
+cin >> a[k], k++;
+for(i=1;i&lt;=n;i++)
+for(j=i+1;j&lt;=n;j++)
+if(a[i]>a[j]){aux=a[i]; 
+a[i]=a[j];
+a[j]=aux;} 
+int l=0; 
+for(int i=0;i&lt;k-1;i++)
+{
+if(i==0&amp;&amp;a[i]==a[i+1]) cout&lt;&lt;a[i]&lt;&lt;" ",l++;
+else if(a[i]==a[i+1] and a[i]!=a[i-1])
+{
+cout&lt;&lt;a[i]&lt;&lt;" ";
+l++;
+if(l%10==0) cout&lt;&lt;endl;
+}
+}
+return 0;
+
+}
+</pre>   
+</div>
+<div id="footer">	
+</div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

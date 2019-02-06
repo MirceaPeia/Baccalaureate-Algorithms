@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html >
+<head>
+<title>Algoritmi Bac</title>
+<link href="../default.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<div id="header">
+<div id="menu">
+<ul>
+<li><a href="../index.html">Acasa</a></li>
+<li><a href="../cifrenr.html">Operatii cu cifrele unor numere</a></li>
+<li><a href="../divi.html">Divizori/Numere Prime/Euclid</a></li>
+<li><a href="../fibo.html">Sirul lui Fibonacii</a></li>
+<li><a href="../ord.html">Ordonari</a></li>
+<li><a href="../interclasare.html">Interclasarea</a></li>
+<li><a href="../cautare.html">Cautare</a></li>
+<li><a href="../test.html">Test</a></li>
+</ul>
+</div>
+</div>
+<div id="headerbg">
+</div>
+
+<div id="page">
+<div id="content">
+<pre>
+
+#include &lt;iostream> 
+using namespace std;
+int main()
+{
+int n,np,ni,pp,pi;
+cin>>n;
+while(n>0)
+{
+ni=np=0;
+pp=pi=1;
+while(n)
+{
+if(n%2==0) {np=np+n%10*pp;
+pp=pp*10;
+}
+else {ni=ni+n%10*pi;
+pi=pi*10;
+}
+n=n/10;
+}
+if(np>ni) cout&lt;&lt;np&lt;&lt;" ";
+else cout&lt;&lt;ni&lt;&lt;" ";
+cin>>n;
+} 
+return 0; 
+}    
+
+
+</pre>   
+</div>	
+
+<div id="footer">
+
+</div>
+</div>
+
+</body>
+</html>
+
+

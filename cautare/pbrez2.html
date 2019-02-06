@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html >
+<head>
+<title>Algoritmi Bac</title>
+<link href="../default.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<div id="header">
+<div id="menu">
+<ul>
+<li><a href="../index.html">Acasa</a></li>
+<li><a href="../cifrenr.html">Operatii cu cifrele unor numere</a></li>
+<li><a href="../divi.html">Divizori/Numere Prime/Euclid</a></li>
+<li><a href="../fibo.html">Sirul lui Fibonacii</a></li>
+<li><a href="../ord.html">Ordonari</a></li>
+<li><a href="../interclasare.html">Interclasarea</a></li>
+<li><a href="../cautare.html">Cautare</a></li>
+<li><a href="../test.html">Test</a></li>
+</ul>
+</div>
+</div>
+<div id="headerbg">
+</div>
+
+<div id="page">
+<div id="content">
+<pre>
+#include &lt;iostream>
+using namespace std;
+int main()
+{
+int x,i,n,a[100],s,d,m,gasit=0,k=0;
+cin>>n;
+for(i=1;i&lt;=n;i++) cin>>a[i];
+cin>>x;
+s=1; d=n;
+while(s&lt;=d&amp;&amp;!gasit)
+{
+m=(s+d)/2;
+if(a[m]==x) gasit=1;
+else if(a[m]&lt;x) s=m+1;
+else d=m-1;
+}
+if(gasit) cout&lt;&lt;m;
+else cout&lt;&lt;"Nu se gaseste";      
+return 0;
+}
+</pre>
+
+</div>
+<div id="footer">
+
+</div>	
+</div>
+
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html >
+<head>
+<title>Algoritmi Bac</title>
+<link href="../default.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<div id="header">
+<div id="menu">
+<ul>
+<li><a href="../index.html">Acasa</a></li>
+<li><a href="../cifrenr.html">Operatii cu cifrele unor numere</a></li>
+<li><a href="../divi.html">Divizori/Numere Prime/Euclid</a></li>
+<li><a href="../fibo.html">Sirul lui Fibonacii</a></li>
+<li><a href="../ord.html">Ordonari</a></li>
+<li><a href="../interclasare.html">Interclasarea</a></li>
+<li><a href="../cautare.html">Cautare</a></li>
+<li><a href="../test.html">Test</a></li>
+</ul>
+</div>
+</div>
+<div id="headerbg">
+</div>
+
+<div id="page">
+<div id="content">
+
+<pre>
+#include &lt;iostream>
+int n, a[20],k;
+void citire()
+{ int i;
+cin>>n;
+for(i=1;i&lt;=n;i++) cin>>a[i];
+cin>>k;
+}
+
+void cautbin(int k)
+{ int s,d,gasit,p=0;
+gasit=0;
+s=1; d=n;
+while(!gasit &amp;&amp;s&lt;=d)
+{ int m=(s+d)/2;
+if(a[m]==k) { gasit=1;
+cout&lt;&lt;"gasit pe pozitia "&lt;&lt;m&lt;&lt;" in "&lt;&lt;p&lt;&lt;" pasi";
+}
+else if(a[m]&lt;k) s=m+1;
+else d=m-1;
+p++;
+}
+if(!gasit) cout&lt;&lt;"nu s-a gasit in "&lt;&lt;p&lt;&lt;" pasi";
+}
+
+int main()
+{ citire();
+cautbin(k);
+return 0;}             
+
+</pre>    
+</div>
+
+<div id="footer">
+
+</div>	
+</div>
+
+
+</body>
+</html>
+
+

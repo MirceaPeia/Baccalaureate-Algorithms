@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html >
+<head>
+<title>Algoritmi Bac</title>
+<link href="../default.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<div id="header">
+<div id="menu">
+<ul>
+<li><a href="../index.html">Acasa</a></li>
+<li><a href="../cifrenr.html">Operatii cu cifrele unor numere</a></li>
+<li><a href="../divi.html">Divizori/Numere Prime/Euclid</a></li>
+<li><a href="../fibo.html">Sirul lui Fibonacii</a></li>
+<li><a href="../ord.html">Ordonari</a></li>
+<li><a href="../interclasare.html">Interclasarea</a></li>
+<li><a href="../cautare.html">Cautare</a></li>
+<li><a href="../test.html">Test</a></li>
+</ul>
+</div>
+</div>
+<div id="headerbg">
+</div>
+
+<div id="page">
+<div id="content">
+<pre>
+int fimpar(int n)
+{int f1,f2,f3,s;  
+if(n==1||n==2)cout&lt;&lt;"1";
+f1=f2=1;    
+s=2;
+while(s!=n)
+{ f3=f1+f2;
+if(f3%2!=0)s++;
+f1=f2;
+f2=f3;
+}
+return f3;        
+}   
+
+
+</pre>   
+</div>
+<div id="footer">	
+</div>
+</div>
+
+</body>
+</html>
+
+

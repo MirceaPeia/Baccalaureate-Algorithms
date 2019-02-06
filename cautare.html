@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html >
+<head>
+<title>Algoritmi Bac</title>
+<link href="default.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<div id="header">
+<div id="menu">
+<ul>
+<li><a href="index.html">Acasa</a></li>
+<li><a href="cifrenr.html">Operatii cu cifrele unor numere</a></li>
+<li><a href="divi.html">Divizori/Numere Prime/Euclid</a></li>
+<li><a href="fibo.html">Sirul lui Fibonacii</a></li>
+<li><a href="ord.html">Ordonari</a></li>
+<li><a href="interclasare.html">Interclasarea</a></li>
+<li><a href="cautare.html">Cautare</a></li>
+<li><a href="test.html">Test</a></li>
+</ul>
+</div>
+</div>
+<div id="headerbg">
+</div>
+
+<div id="page">
+<div id="content">
+<h1>Cele doua tipuri de cautari:</h1>
+
+<h3>Secventiala:</h3>
+<pre>
+int main()
+{int x[100],n,a,i,gasit=0;
+cout&lt;&lt;"n= ";cin>>n;
+for(i=1;i&lt;=n;i++)
+{cout&lt;&lt;"x["&lt;&lt;i&lt;&lt;"]= ";cin>>x[i];}
+cout&lt;&lt;endl&lt;&lt;"a= ";cin>>a;
+for(i=1;i&lt;=n;i++)
+{if(a==x[i])
+gasit=1;}
+if(gasit==1)
+cout&lt;&lt;"Numarul "&lt;&lt;a&lt;&lt;" se gaseste in sir.";
+else
+cout&lt;&lt;"Numarul "&lt;&lt;a&lt;&lt;" nu se gaseste in sir.";
+return 0;
+}
+</pre>
+<h3>Binara:</h3><h4>Numai in cazul in care tabloul unidimensional este ordonat crescator</h4>
+<pre>int i,n,li,ls,mij,gasit,x,v[25];
+int main()
+{
+cout&lt;&lt;"n="cin>>n;
+cout&lt;&lt;"Cauta elementul =";cin>>x;
+for(i=1;i&lt;=n;i++)
+{cout&lt;&lt;"v[]"&lt;&lt;i&lt;&lt;"]="; cin>>v[i];}
+for(i=1;i&lt;=n;i++)
+cout&lt;&lt;v[i]&lt;&lt;" ";
+cout&lt;&lt;endl;
+li=1; //limita inferioara
+ls=n; //limita superioara
+gasit=0;
+
+while((li&lt;=ls)&amp;&amp;(!gasit))
+{
+mij=int((li+ls)/2); 
+if(x==v[mij])
+{
+cout&lt;&lt;"L-am gasit pe pozitia"&lt;&lt;mij;
+gasit=1;
+}
+else if(x>v[mij])
+li=mij+1;
+else ls=mij-1; 
+}
+if(gasit==0)
+cout&lt;&lt;x&lt;&lt;"Elementul cautat nu se gaseste in tablou";
+
+}    
+
+</pre>
+<h3>Probleme rezolvate pe baza algoritmilor de cautare in vectori:</h3>
+<ul>
+<li><p>Se dă un vector x cu n elemente numere naturale, ordonate crescator, și un vector y cu m elemente, de asemenea numere naturale. Verificati pentru fiecare element al vectorului y daca apare in x. <br>
+Exemplu<br>
+daca se citeste:<br>
+7<br>
+1 2 5 6 9 10 14<br> 
+8<br>
+8 14 9 14 16 15 4 2<br> 
+Se va afisa:<br>
+0 1 1 1 0 0 0 1 <br>
+</p>    
+<a href="cautare/pbrez1.html"  target="_blank" >Rezolvare</a>     
+</li>
+
+<li>
+<p>Se da un vector a cu n elemente numere naturale,ordonate crescator. Verificati daca elementul x se gaseste in vectorul a si afisati de cate ori se regaseste in vector acest element.
+</p>    
+<a href="cautare/pbrez2.html" target="_blank">Rezolvare</a>
+</li>
+<li> <p>Se citeste un vector A cu n elemente numere naturale distincte, ordonate crescator. Se citeste apoi un numar natural k. Sa se determine pozitia pe care apare k in vectorul A si numarul de pasi facuti de program pana la gasirea lui. Daca numarul k nu se afla in vector se va afisa acest lucru impreuna cu numarul de pasi facuti de program.</p>
+<a href="cautare/pbrez3.html" target="_blank">Rezolvare</a>    
+</li>
+
+</ul>
+
+<h3>Probleme nerezolvate pe baza algoritmilor de cautare in vectori:</h3>
+<ul><li>Se dă un sir cu n elemente, numere naturale. Să se verifice dacă în sir exista elemente impare.
+Exemplu
+Se va citi:
+5
+2 8 6 10 8
+Se va afisa:
+NU
+</li><br>
+<li>Se dă un vector cu n elemente numere naturale. Să se verifice dacă toate elementele vectorului sunt diferite două câte două.
+Exemplu:
+Se va citi:
+7
+5 8 10 4 9 7 6 
+Se va afisa:
+DA</li> <br>
+<li>Se dă un şir cu n elemente, numere intregi. Să se verifice dacă elementele pare din şir sunt ordonate crescator.
+Exemplu:
+Se va citi:
+5
+2 7 6 10 5
+Se va afisa:
+DA
+</li>
+</ul>
+
+
+
+</div>       
+<div id="footer">
+</div>	
+</div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html >
+<head>
+<title>Algoritmi Bac</title>
+<link href="../default.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<div id="header">
+<div id="menu">
+<ul>
+<li><a href="../index.html">Acasa</a></li>
+<li><a href="../cifrenr.html">Operatii cu cifrele unor numere</a></li>
+<li><a href="../divi.html">Divizori/Numere Prime/Euclid</a></li>
+<li><a href="../fibo.html">Sirul lui Fibonacii</a></li>
+<li><a href="../ord.html">Ordonari</a></li>
+<li><a href="../interclasare.html">Interclasarea</a></li>
+<li><a href="../cautare.html">Cautare</a></li>
+<li><a href="../test.html">Test</a></li>
+</ul>
+</div>
+</div>
+<div id="headerbg">
+</div>
+
+<div id="page">
+<div id="content">
+<pre>
+#include &lt; iostream > 
+using namespace std;    
+int a,b,c;
+int main()
+{cin>>a>>b;    
+if(a==b&amp;&amp;a!=1)cout&lt;&lt;"a si b nu sunt termeni consecutivi ai sirului lui Fibonacci";
+else { c=b-a;
+while(c)
+{b=a;    
+a=c;
+c=b-a;}
+}
+if(c==0&amp;&amp;a==1) cout&lt;&lt;" a si b sunt termeni consecutivi ai sirului lui Fibonacci";  
+else cout&lt;&lt;"a si b nu sunt termeni consecutivi ai sirului lui Fibonacci";      
+}    
+
+
+</pre>   
+</div>
+<div id="footer">	
+</div>
+</div>
+
+</body>
+</html>
+
+

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html >
+<head>
+<title>Algoritmi Bac</title>
+<link href="default.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<div id="header">
+	<div id="menu">
+		<ul>
+			<li><a href="index.html">Acasa</a></li>
+            <li><a href="cifrenr.html">Operatii cu cifrele unor numere</a></li>
+            <li><a href="divi.html">Divizori/Numere Prime/Euclid</a></li>
+			<li><a href="fibo.html">Sirul lui Fibonacii</a></li>
+			<li><a href="ord.html">Ordonari</a></li>
+            <li><a href="interclasare.html">Interclasarea</a></li>
+            <li><a href="cautare.html">Cautare</a></li>
+            <li><a href="test.html">Test</a></li>
+		</ul>
+	</div>
+</div>
+<div id="headerbg">
+</div>
+
+<div id="page">
+	<div id="content">
+		<h1>Interclasarea</h1>    
+
+<h3>Pentru ca interclasarea sa fie corect vectori trebuie sa fie ordonati</h3>
+<h3>Daca se citeste vectorul a cu m elemente ordonate crescator si vectorul b cu n elementele ordonate crescator. In uma interclasari vom avea un vector c cu m+n elemente, ordonat crescator </h3>    
+<h3>Algoritmul de interclasare a vectorilor:</h3>
+<pre>
+k=0; i=1; j=1; 
+while(i&lt;=n &amp;&amp; j&lt;=m)
+if(a[i]&lt;b[j])
+{
+k++;
+c[k]=a[i];
+i++;
+}
+else
+{
+k++;
+c[k]=b[j];
+j++;
+}
+if(i&lt;=n)
+for(l=i;l&lt;=n; l++)
+{
+k++;
+c[k]=a[l];
+}
+else 
+for(l=j; l&lt;=m; l++) 
+{
+k++;
+c[k]=b[l]; 
+}
+
+</pre>
+<h3>Probleme rezolvate ce se bazeaza pe algoritmul de mai sus:</h3> 
+<ul><li>
+<p>Fișierul text.in contine pe prima linie doua numere naturale din intervalul [2,104], m si
+n, iar pe fiecare dintre urmatoarele două linii câte un sir de m, respectiv n numere naturale
+din intervalul [0,109], ordonate strict crescator. Numerele aflate pe aceeași linie a
+fișierului sunt separate prin cate un spatiu.
+Se cere să se afiseze pe ecran, în ordine strict descrescatoare, numerele pare care apar
+în cel putin unul dintre cele doua siruri. Numerele afisate sunt separate prin cate un spatiu,
+iar daca nu exista niciun astfel de numar, se afișează pe ecran mesajul nu exista.
+Pentru determinarea numerelor cerute se va utiliza un algoritm eficient din punctul de
+vedere al timpului de executare. <br>
+Exemplu: dacă fișierul conține numerele <br>
+5 6<br>
+1 4 8 9 10 <br>
+2 4 10 12 15 18<br>
+se afișează pe ecran <br>
+18 12 10 8 4 2
+</p>   
+<a href="interclasare/pbrez1.html" target="_blank"  >Rezolvare</a>    
+</li>    
+<li>
+<p>   Se dau doua siruri a şi b, cu n, respectiv m elemente, numere naturale, ordonate strict crescator. Să se afiseze, în ordine strict crescatoare, valorile existente în ambele siruri.
+</p>    
+<a href="interclasare/pbrez2.html" target="_blank">Rezolvare</a>    
+    </li>       
+<li>
+<p>   Se dau două siruri a si b, cu n, respectiv m elemente, numere naturale, ordonate crescator. Să se construiasca un al treilea sir, c, care sa contina, în ordine crescatoare, elementele din sirurile a şi b.<br>
+Exemplu:<br>
+Daca se citeste:<br>
+7<br>
+1 3 4 6<br>
+7 8 8 <br>
+8<br>
+2 4 5 6 8<br>
+9 9 12<br>
+Se va afisa:<br>
+1 2 3 4 4 5 6 6 7 8<br> 
+8 8 9 9 12 <br>
+</p>    
+<a href="interclasare/pbrez3.html" target="_blank">Rezolvare</a>    
+    </li>           
+</ul>    
+<h3>Probleme nerezolvate ce se bazeaza pe algoritmul de mai sus:</h3> 
+    
+<ul>
+<li>
+<p>Se dau două siruri a şi b, cu n, respectiv m elemente, numere naturale, ordonate crescator. Să se construiască un al treilea sir, c, care să contina, în ordine crescatoare, elementele din sirurile a si b.</p>    
+</li>   
+<li>
+<p> dau doua siruri, cu n, respectiv m, elemente, numere naturale. Primul sir este ordonat crescator, iar al doilea element este ordonat descrescator. Să se afişeze, în ordine crescatoare, valorile pare din cele doua siruri.</p>    
+</li>       
+<li>
+<p>Se dau doua airuri a şi b, cu n, respectiv m elemente, numere naturale, ordonate strict crescător. Să se afişeze, în ordine strict crescatoare, valorile existente în cel putin unul dintre cele două airuri.</p>    
+</li>       
+</ul>       
+	</div>
+<div id="footer">
+	
+</div>	
+</div>
+
+</body>
+</html>

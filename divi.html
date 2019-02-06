@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Algoritmi Bac</title>
+<link href="default.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+<div id="header">
+	<div id="menu">
+		<ul>
+			<li><a href="index.html">Acasa</a></li>
+            <li><a href="cifrenr.html">Operatii cu cifrele unor numere</a></li>
+            <li><a href="divi.html">Divizori/Numere Prime/Euclid</a></li>
+			<li><a href="fibo.html">Sirul lui Fibonacii</a></li>
+			<li><a href="ord.html">Ordonari</a></li>
+            <li><a href="interclasare.html">Interclasarea</a></li>
+            <li><a href="cautare.html">Cautare</a></li>
+            <li><a href="test.html">Test</a></li>
+		</ul>
+	</div>
+</div>
+
+<div id="headerbg">
+</div>
+
+<div id="page">
+	<div id="content">
+		   
+<h1> Divizibilitate. Numere Prime. Algoritmul lui Euclid </h1>
+<h2>Algoritmi principlai necesari pentru rezolvarea problemelor din aceasta categorie:</h2>    
+<h3>Algoritmul de descompunere in factori primi:</h3>
+<pre>
+int main()
+{
+int n,p,d=2;
+cin>>n;	
+while(n>1)
+{p = 0;
+while(n % d == 0)
+{
+p++;
+n=n/d;
+}
+if(p)
+cout &lt;&lt;d&lt;&lt;" "&lt;&lt;p&lt;&lt; endl;
+d++;
+if(n>1&amp;&amp;d*d>n)
+d=n; 
+}
+return 0;
+}</pre>    
+
+<h3>Algoritmul de verificare daca un numar este prim:</h3>
+<pre>int main()                 
+{                          
+int n,ok=0;                 
+cout&lt;&lt;"Introdu n"; cin&gt;&gt;n; 
+for (int i=2; i&lt;=n/2; i++)   
+if (n%i==0)                
+ok=1;                       
+if (ok==1&amp;&amp;n&gt;1)             
+cout&lt;&lt;"Numarul este prim"; 
+else                       
+cout&lt;&lt;"Numarul nu este prim";
+return 0;
+}</pre>   
+
+<h3>Detereminare CMMDC prin scaderi repetate:</h3>    
+<pre>int a,b;
+int main()
+{cin>>a>>b;
+while(a!=b)
+{if(a>b)
+a=a-b;
+else b=b-a;
+}
+cout&lt;&lt;a;   
+return 0; 
+}
+</pre>    
+<h3>Determinare CMMDC folosind algoritmul lui Euclid:</h3>    
+<pre>int a,b,r;
+int main()
+{cin>>a>>b;
+r=a%b;<br>
+while(r!=0) 
+{a=b;
+b=r;
+r=a%b;}
+cout&lt;&lt;b;
+return 0;   
+}</pre>
+
+<h3>Probleme rezolvate ce se bazeaza pe secvenele de cod prezentate mai sus:</h3>     
+<ul>
+<li><p>Subprogramul f are ca parametru pe numarul natural n. Acest subprograma returneaza 1 daca numarul n este numar perfect sau 0
+daca acesta nu indeplineste aceasta proprietate. Un numar este perfect el este egal cu suma divizorilui lui.</p><a href="divi/rezpb1.html" target="_blank" >Rezolvare</a>
+</li>    
+<li><p>Subprogramul divcomuni are ca paramentru numarul natural x. Subprogramul afiseaza pe ecran un numar natural care are aceasi
+divizori primi ca numarul x dat.</p><a href="divi/rezpb2.html" target="_blank">Rezolvare</a>
+</li>
+<li><p>Subprogramul triplete are trei parametri, a, b și c, prin care primeste câte un numar
+natural din intervalul [0,104]. Subprogramul afisează pe ecran toate tripletele de
+numere naturale, x, y şi z, solutii ale ecuatiei x+y+z=c, cu proprietatea că a≤x≤y≤z≤b.
+Fiecare triplet afișat este incadrat intre acolade, iar numerele x, y și z sunt afisate în
+această ordine, separate prin cate o virgula. Dacă nu există niciun triplet cu proprietatea
+ceruta, se afisează mesajul nu exista.
+Scrieți definitia completa a subprogramului.<br>
+Exemplu:daca a=2, b=4 şi c=8, se afiseaza pe ecran tripletele
+{2,2,4} {2,3,3} 
+iar daca a=5, b=8, c=8 se afiseaza pe ecran mesajul:
+nu exista.</p><a href="divi/rezpb3.html" target="_blank">Rezolvare</a>    
+</li>    
+</ul>
+<h3>Probleme nerezolvate ce se bazeaza pe secvenele de cod prezentate mai sus:</h3>     
+<ul>
+<li> <p>Se citesc doua numere naturale a si b (a mai mic decat b). Afisati numerele din intervalul [a,b] care au proprietatea ca au
+numar maxim de divizori primi. <br>
+Exemplu: a=30, b=45 => 30, 42 (au cate 3 divizori primi, iar restul numerelor au mai putini) 
+</p> </li>    
+    
+<li><p>
+    Se citesc doua numere naturale a si b (a mai mic decat b). Afisati numerele din intervalul [a,b] care au proprietatea ca au 
+numar maxim de divizori. <br>
+Exemplu: a=10, b=20 => 12, 18, 20 (au cate 6 divizori, iar restul numerelor au mai putini)</p> </li>    
+<li>
+<p> Sa se calculeze cmmdc al 3 numere a, b si c fara a calcula cmmdc a doua dintre ele si apoi cu al treilea. 
+</p>
+</li>    
+    
+    
+    
+</ul>
+
+</div>
+<div id="footer">
+</div>	
+</div>
+
+</body>
+</html>

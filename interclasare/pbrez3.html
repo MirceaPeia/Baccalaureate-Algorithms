@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html >
+<head>
+<title>Algoritmi Bac</title>
+<link href="../default.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<div id="header">
+<div id="menu">
+<ul>
+<li><a href="../index.html">Acasa</a></li>
+<li><a href="../cifrenr.html">Operatii cu cifrele unor numere</a></li>
+<li><a href="../divi.html">Divizori/Numere Prime/Euclid</a></li>
+<li><a href="../fibo.html">Sirul lui Fibonacii</a></li>
+<li><a href="../ord.html">Ordonari</a></li>
+<li><a href="../interclasare.html">Interclasarea</a></li>
+<li><a href="../cautare.html">Cautare</a></li>
+<li><a href="../test.html">Test</a></li>
+</ul>
+</div>
+</div>
+<div id="headerbg">
+</div>
+
+<div id="page">
+<div id="content">
+<pre>
+#include &lt;iostream>
+using namespace std;
+int n,m,i,j,k,a[10001],b[10001],c[20002]
+int main()
+{cin>>n;
+for(i=1;i&lt;=n;i++)
+cin>>a[i];                 
+for(i=1;i&lt;=n;i++)
+cin>>b[i];
+i=j=1;
+while(i&lt;=n&amp;&amp;j&lt;=m)
+if(a[i]&lt;=b[j])
+{c[++k]=a[i];
+i++;
+}
+else 
+{c[++k]=b[j];
+j++;
+}
+
+for(i=1;i&lt;=n;i++)
+c[++k]=a[i];              
+
+for(j=1;j&lt;=n;j++)
+c[++k]=b[j];              
+for(i=1;i&lt;=k;i++)
+{cout&lt;&lt;c[i]&lt;&lt;" ";
+if(i%10==0)
+cout&lt;&lt;endl;
+}
+return 0;              
+} 
+</pre>   
+</div>
+<div id="footer">	
+</div>
+</div>
+
+</body>
+</html>
+
+
+
+
+

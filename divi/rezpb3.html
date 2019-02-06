@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html >
+<head>
+<title>Algoritmi Bac</title>
+<link href="../default.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<div id="header">
+<div id="menu">
+<ul>
+<li><a href="../index.html">Acasa</a></li>
+<li><a href="../cifrenr.html">Operatii cu cifrele unor numere</a></li>
+<li><a href="../divi.html">Divizori/Numere Prime/Euclid</a></li>
+<li><a href="../fibo.html">Sirul lui Fibonacii</a></li>
+<li><a href="../ord.html">Ordonari</a></li>
+<li><a href="../interclasare.html">Interclasarea</a></li>
+<li><a href="../cautare.html">Cautare</a></li>
+<li><a href="../test.html">Test</a></li>
+</ul>
+</div>
+</div>
+<div id="headerbg">
+</div>
+
+<div id="page">
+<div id="content">
+<pre>
+void triplete(int a,int b,int c)
+{int ok=0,x,y,z;    
+for(x=a;x&lt;=b;x++)
+for(y=x;y&lt;=b;y++)
+{z=c-x-y;
+{if(z&lt;=b&amp;&amp;z>=y)
+cout&lt;&lt;"{"&lt;&lt;x&lt;&lt;","&lt;&lt;y&lt;&lt;","&lt;&lt;z&lt;&lt;"}";
+ok=1;
+}
+}
+if(ok==0)cout&lt;&lt;"Nu exista";
+}    
+
+</pre>   
+</div>
+<div id="footer">	
+</div>
+</div>
+
+</body>
+</html>
+
+
